@@ -1,0 +1,198 @@
+@import 'config';
+@import 'utilities';
+
+/*************************/
+/*General Style*/
+/*************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', sans-serif;
+  background-color: white;
+  line-height: 1.4;
+  color: $color-black;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+/*************************/
+/*Navigation*/
+/*************************/
+.navigation {
+  position: relative;
+  padding-top: 3rem;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  &__info {
+    position: absolute;
+    top: 1rem;
+    right: 8rem;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+  }
+
+  &__item {
+    padding: 0.7rem 1rem;
+  }
+
+  &__text {
+    background-color: $secondary-ligth-color;
+    height: 30%;
+    color: white;
+    margin-left: 0.7rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+  }
+
+  .color {
+    background-color: $primary-color;
+    color: white !important;
+  }
+}
+
+/*************************/
+/*Header*/
+/*************************/
+.header {
+  height: 20vh;
+  background-color: $primary-color;
+  color: white;
+  // Header Home
+  &__content {
+    padding: 2.5rem 6rem;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+  }
+}
+
+/*************************/
+/*Home Section: A*/
+/*************************/
+#home {
+  &-a {
+    .section-title {
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+    }
+    .btn {
+      padding: 1.5rem 2.5rem;
+      width: 40%;
+      font-size: 1rem;
+      background-color: $primary-light-color;
+      color: white;
+      border: none;
+      &:nth-child(1n) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  /*************************/
+  /*Home Section: B*/
+  /*************************/
+  &-b {
+    .article {
+      width: 83%;
+      &__heading {
+        color: white;
+        letter-spacing: 3px;
+        background-color: $primary-color;
+        padding: 8px;
+        margin-bottom: 1rem;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 8px;
+        &:nth-child(2n + 1) {
+          background-color: $secondary-ligthess-color;
+        }
+      }
+
+      &__label {
+        color: $color-black;
+        font-size: 3rem;
+        padding-right: 1rem;
+        &:nth-child(2n) {
+          color: $secondary-color;
+        }
+      }
+
+      &__paragraph {
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
+
+/*************************/
+/*Footer*/
+/*************************/
+.footer {
+  background-color: $color-grey-light;
+  padding: 4rem 0;
+
+  &__navigation {
+    padding: 1rem;
+    margin-bottom: 3rem 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__item {
+    color: $color-black;
+    font-size: 1.1rem;
+    margin: 0 1.5rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__company-name {
+    margin: 0 1rem;
+  }
+}
